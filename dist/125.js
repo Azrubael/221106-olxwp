@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunk_221106_olxwp=self.webpackChunk_221106_olxwp||[]).push([[125],{125:function(n,e,s){s.r(e),s.d(e,{useless:function(){return t}}),e.default=()=>"This function does nothing";const t=()=>"neither this one!"}}]);
+//# sourceMappingURL=125.js.map

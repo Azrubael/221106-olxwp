@@ -3,8 +3,9 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 // styles minimizator
 // const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const {BundleAnalyzerPlugin} = require("webpack-bundle-analyzer");
 
-module.exports = (env={}, argv={}) => ({
+module.exports = (env = {}, argv = {}) => ({
   module: {
     rules: [
 	{
@@ -61,10 +62,11 @@ module.exports = (env={}, argv={}) => ({
 			filename: "[name].css",
 			chunkFilename: "[id].css"
 			})
-		: null
+		: null,
+	env.analyze ? new BundleAnalyzerPlugin() : null
   ].filter(
 	// To remove any possibility of "null" values
 	// inside the plugins array, we filter it
-	plugin => !!plugin
+	plugin => plugin !== null
   )
 });
