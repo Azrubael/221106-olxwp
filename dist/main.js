@@ -16,6 +16,17 @@ const hello = subject => console.log(`Hello ${subject}!`);
 
 /***/ }),
 
+/***/ "./assets/sailingTheme.mp3":
+/*!*********************************!*\
+  !*** ./assets/sailingTheme.mp3 ***!
+  \*********************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = (__webpack_require__.p + "2774626a15b4c89b5fcba154ce7e412b.mp3");
+
+/***/ }),
+
 /***/ "./assets/0fb35409-1df9-4d1b-ac84-42b23f7ff363.jpg":
 /*!*********************************************************!*\
   !*** ./assets/0fb35409-1df9-4d1b-ac84-42b23f7ff363.jpg ***!
@@ -23,7 +34,7 @@ const hello = subject => console.log(`Hello ${subject}!`);
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = (__webpack_require__.p + "e5cace1e6faa44c483dc33934d983cfb.jpg");
+/* harmony default export */ __webpack_exports__["default"] = (__webpack_require__.p + "4ee4d1ac65a1e50b3939f727bb1b45d3.jpg");
 
 /***/ })
 
@@ -123,17 +134,23 @@ var __webpack_exports__ = {};
   \**********************/
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _assets_0fb35409_1df9_4d1b_ac84_42b23f7ff363_jpg__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../assets/0fb35409-1df9-4d1b-ac84-42b23f7ff363.jpg */ "./assets/0fb35409-1df9-4d1b-ac84-42b23f7ff363.jpg");
-/* harmony import */ var _hello__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./hello */ "./src/hello.js");
+/* harmony import */ var _assets_sailingTheme_mp3__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../assets/sailingTheme.mp3 */ "./assets/sailingTheme.mp3");
+/* harmony import */ var _hello__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./hello */ "./src/hello.js");
 
+
+
+(0,_hello__WEBPACK_IMPORTED_MODULE_2__.hello)("OLX Dev!");
+const audio = new Audio(_assets_sailingTheme_mp3__WEBPACK_IMPORTED_MODULE_1__["default"]);
+const pic = document.querySelector("body");
 document.body.innerHTML = '<div id="myMemes"></div>';
 document.getElementById("myMemes").innerHTML = `<center>
 	<h1>And his name is...</h1>
-	<img src="${_assets_0fb35409_1df9_4d1b_ac84_42b23f7ff363_jpg__WEBPACK_IMPORTED_MODULE_0__["default"]}" height="250px" /><br />
+	<img id="pic" src="${_assets_0fb35409_1df9_4d1b_ac84_42b23f7ff363_jpg__WEBPACK_IMPORTED_MODULE_0__["default"]}" height="250px" /><br />
 	<h2><i>HAMSTER</i></h2></center>`;
-
-// export const hello = subject => console.log(`Hello ${subject}!`)
-
-(0,_hello__WEBPACK_IMPORTED_MODULE_1__.hello)("OLX Dev!");
+pic.addEventListener('click', () => {
+  console.log('Клик!');
+  audio.play();
+});
 }();
 /******/ })()
 ;

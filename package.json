@@ -1,6 +1,6 @@
 {
-  "name": "221106-olxwp",
-  "version": "1.0.0",
+  "name": "221115-olxwp",
+  "version": "2.0.0",
   "main": "src/index.js",
   "license": "MIT",
   "devDependencies": {
@@ -10,20 +10,19 @@
     "file-loader": "^6.2.0",
     "html-webpack-plugin": "^5.5.0",
     "image-webpack-loader": "^8.1.0",
-    "webpack": "^5.74.0",
+    "webpack": "^5.75.0",
     "webpack-cli": "^4.10.0",
     "webpack-dev-server": "^4.11.1"
   },
   "scripts": {
     "build": "webpack --mode=production",
     "build:dev": "webpack --mode=development",
-    "start:dev": "webpack-dev-server --mode=development"
+    "start:dev": "webpack-dev-server --mode=development",
+    "start": "webpack-dev-server --mode=production"
   },
   "browserslist": [
     "last 2 versions",
     "not dead"
   ],
-  "dependencies": {
-    "browserlist": "^1.0.1"
-  }
+  "dependencies": {}
 }
