@@ -1,3 +1,45 @@
+import React, {useState} from "react"
+import { render } from "react-dom"
+
+import hamster from "../assets/0fb35409-1df9-4d1b-ac84-42b23f7ff363.jpg"
+import Sail from "../assets/and-his-name-is.mp3"
+import "./style.scss"
+
+const audio = new Audio(Sail)
+
+const App = () => {
+	const [personState, setPersonState] = useState("^.-")
+	const wakeUp = () =>
+		import(/* webPackChunkName: "myAwesomeLazyModule",
+		webpackPreload: true*/ "./lazy-one").then(
+			mod => setPersonState(mod.default)
+		)
+	const lazyBtnStyle = {
+		margin: "10px auto",
+		display: "flex",
+		fontSize: "4rem"
+	}
+
+	return (
+		<div id="myMemes">
+			<h1>You can't expect...</h1>
+			<img src={hamster} role="button" onClick={() => audio.play()} />
+			<button style={lazyBtnStyle} onClick={() => wakeUp()}>
+				{personState}
+			</button>
+		</div>
+	)
+}
+
+const wrapper = document.createElement("div")
+wrapper.setAttribute("id", "app")
+document.body.appendChild(wrapper)
+
+render(<App />, wrapper)
+
+/*************************************************************
+ 							старый ненужный код
+ *************************************************************
 import hamster from "../assets/0fb35409-1df9-4d1b-ac84-42b23f7ff363.jpg"
 import Sail from "../assets/and-his-name-is.mp3"
 import "./style.scss"
@@ -12,7 +54,7 @@ import("./module-1.js").then(mod => {
 
 // Импортирование двух функций и возврат их как промиса
 const outputs = [1, 2].map(modNum =>
-	import(`./module-${modNum}`).then(mod => mod.default())
+	import( `./module-${modNum}`).then(mod => mod.default())
 )
 Promise.all(outputs).then(outs => console.log(outs.join(" and ")))
 
@@ -40,3 +82,4 @@ document.body.appendChild(lazyButton)
 
 import { hello } from "./hello"
 hello("OLX Dev!")
+*/
