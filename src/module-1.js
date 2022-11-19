@@ -1,3 +1,3 @@
-export default () => "This function does nothing"
+export default () => "This is an experiment"
 
-export const useless = () => "neither this one!"
+export const useless = () => "another one!"

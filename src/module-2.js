@@ -1,0 +1,1 @@
+export default () => "From zero to Hero!"

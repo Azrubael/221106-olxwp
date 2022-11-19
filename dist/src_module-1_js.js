@@ -11,8 +11,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "useless": function() { return /* binding */ useless; }
 /* harmony export */ });
-/* harmony default export */ __webpack_exports__["default"] = (() => "This function does nothing");
-const useless = () => "neither this one!";
+/* harmony default export */ __webpack_exports__["default"] = (() => "This is an experiment");
+const useless = () => "another one!";
 
 /***/ })
 

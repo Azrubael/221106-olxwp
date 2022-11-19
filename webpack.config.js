@@ -65,8 +65,7 @@ module.exports = (env = {}, argv = {}) => ({
 		: null,
 	env.analyze ? new BundleAnalyzerPlugin() : null
   ].filter(
-	// To remove any possibility of "null" values
-	// inside the plugins array, we filter it
+	// To remove any possibility of "null" values inside the plugins array, we filter it
 	plugin => plugin !== null
   )
 });
