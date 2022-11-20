@@ -1,1 +1,0 @@
-{"version":3,"file":"src_module-1_js.js","mappings":";;;;;;;;;;;;;AAAA,+DAAe,MAAM,uBAAuB;AAErC,MAAMA,OAAO,GAAG,MAAM,cAAc","sources":["webpack://221106-olxwp/./src/module-1.js"],"sourcesContent":["export default () => \"This is an experiment\"\r\n\r\nexport const useless = () => \"another one!\""],"names":["useless"],"sourceRoot":""}
