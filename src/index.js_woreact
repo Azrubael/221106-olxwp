@@ -1,5 +1,5 @@
-import hamster from "../assets/0fb35409-1df9-4d1b-ac84-42b23f7ff363.jpg"
-import Sail from "../assets/and-his-name-is.mp3"
+import hamster from "./assets/0fb35409-1df9-4d1b-ac84-42b23f7ff363.jpg"
+import Sail from "./assets/and-his-name-is.mp3"
 import "./style.scss"
 
 // Импортирование функции, как промиса
